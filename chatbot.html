@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sustaina AI Chatbot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ambient-bg"></div>
+    <nav class="main-navbar">
+        <div class="navbar-logo">Sustaina AI</div>
+        <div class="navbar-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="chatbot.html" class="nav-link active">Chatbot</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" title="Toggle theme">🌙</button>
+    </nav>
+    <main>
+        <div class="chatbot-container">
+            <div class="chatbot-header">
+                <button class="back-btn" onclick="window.location.href='index.html'" title="Back">&#8592;</button>
+                <div class="sdg-icon-large" id="sdg-icon"><span id="sdg-number"></span></div>
+                <div class="sdg-title-group">
+                    <h1 id="sdg-title"></h1>
+                    <button id="clear-chat" class="clear-btn" title="Clear chat">&#128465;</button>
+                </div>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="welcome-message" id="welcome-message">
+                    <h2 id="welcome-title"></h2>
+                    <p id="welcome-description"></p>
+                </div>
+                <!-- Messages will be added here dynamically -->
+            </div>
+            <form id="chat-form" class="chat-input-container" autocomplete="off">
+                <button id="voice-btn" class="voice-btn" title="Voice input">🎤</button>
+                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" />
+                <button type="submit" id="send-button" title="Send">&#9658;</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 Sustaina AI. All rights reserved.
+    </footer>
+    <script src="/static/chatbot.js"></script>
+</body>
+</html>

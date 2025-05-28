@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sustaina AI - SDG Chatbot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ambient-bg"></div>
+    <nav class="main-navbar">
+        <div class="navbar-logo">Sustaina AI</div>
+        <div class="navbar-links">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="chatbot.html" class="nav-link">Chatbot</a>
+        </div>
+    </nav>
+    <div class="container">
+        <header class="main-header">
+            <div class="logo">
+                <h1>Sustaina AI</h1>
+            </div>
+            <div class="tagline">
+                <p>Empowering the SDGs with AI-powered conversations</p>
+            </div>
+        </header>
+        <div class="sdg-select-container">
+            <label for="sdg-select" class="sdg-select-label">Choose a Sustainable Development Goal:</label>
+            <select id="sdg-select" class="sdg-select">
+                <option value="" disabled selected>Select an SDG...</option>
+                <option value="1">SDG 1. No Poverty</option>
+                <option value="2">SDG 2. Zero Hunger</option>
+                <option value="3">SDG 3. Good Health and Well-being</option>
+                <option value="4">SDG 4. Quality Education</option>
+                <option value="5">SDG 5. Gender Equality</option>
+                <option value="6">SDG 6. Clean Water and Sanitation</option>
+                <option value="7">SDG 7. Affordable and Clean Energy</option>
+                <option value="8">SDG 8. Decent Work and Economic Growth</option>
+                <option value="9">SDG 9. Industry, Innovation and Infrastructure</option>
+                <option value="10">SDG 10. Reduced Inequalities</option>
+                <option value="11">SDG 11. Sustainable Cities and Communities</option>
+                <option value="12">SDG 12. Responsible Consumption and Production</option>
+                <option value="13">SDG 13. Climate Action</option>
+                <option value="14">SDG 14. Life Below Water</option>
+                <option value="15">SDG 15. Life on Land</option>
+                <option value="16">SDG 16. Peace, Justice and Strong Institutions</option>
+                <option value="17">SDG 17. Partnerships for the Goals</option>
+            </select>
+            <button class="sdg-select-btn" id="go-to-chatbot" disabled>Go to Chatbot</button>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Sustaina AI. All rights reserved.
+    </footer>
+    <script>
+        // SDG info for storage
+        const sdgInfo = {
+            1: { title: "No Poverty", desc: "End poverty in all its forms everywhere" },
+            2: { title: "Zero Hunger", desc: "End hunger, achieve food security and improved nutrition" },
+            3: { title: "Good Health and Well-being", desc: "Ensure healthy lives and promote well-being for all" },
+            4: { title: "Quality Education", desc: "Ensure inclusive and equitable quality education" },
+            5: { title: "Gender Equality", desc: "Achieve gender equality and empower all women and girls" },
+            6: { title: "Clean Water and Sanitation", desc: "Ensure availability and sustainable management of water" },
+            7: { title: "Affordable and Clean Energy", desc: "Ensure access to affordable, reliable, sustainable energy" },
+            8: { title: "Decent Work and Economic Growth", desc: "Promote sustained, inclusive economic growth" },
+            9: { title: "Industry, Innovation and Infrastructure", desc: "Build resilient infrastructure, promote industrialization" },
+            10: { title: "Reduced Inequalities", desc: "Reduce inequality within and among countries" },
+            11: { title: "Sustainable Cities and Communities", desc: "Make cities inclusive, safe, resilient and sustainable" },
+            12: { title: "Responsible Consumption and Production", desc: "Ensure sustainable consumption and production patterns" },
+            13: { title: "Climate Action", desc: "Take urgent action to combat climate change" },
+            14: { title: "Life Below Water", desc: "Conserve and sustainably use the oceans and marine resources" },
+            15: { title: "Life on Land", desc: "Protect, restore and promote sustainable use of ecosystems" },
+            16: { title: "Peace, Justice and Strong Institutions", desc: "Promote peaceful and inclusive societies for sustainable development" },
+            17: { title: "Partnerships for the Goals", desc: "Strengthen the means of implementation and revitalize partnerships" }
+        };
+
+        const select = document.getElementById('sdg-select');
+        const btn = document.getElementById('go-to-chatbot');
+        select.addEventListener('change', function() {
+            btn.disabled = !this.value;
+        });
+        btn.addEventListener('click', function() {
+            if (select.value) {
+                const n = select.value;
+                localStorage.setItem('currentSDG', n);
+                localStorage.setItem('sdgTitle', sdgInfo[n].title);
+                localStorage.setItem('sdgDescription', sdgInfo[n].desc);
+                window.location.href = 'chatbot.html';
+            }
+        });
+    </script>
+</body>
+</html>
