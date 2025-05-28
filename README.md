@@ -1,1 +1,18 @@
-# sustaina-ai
+# Sustaina AI – SDG-based Smart Chatbot
+Sustaina AI is an intelligent, SDG-specific chatbot platform built with Flask and powered by a local LLM (Ollama + Phi-3). It allows users to interact with domain-specific bots dedicated to each of the 17 Sustainable Development Goals (SDGs) defined by the United Nations.
+
+# 🎯 Project Highlights
+
+💬 Smart AI responses tailored to the selected SDG
+🧠 Powered by Phi-3 through Ollama's local LLM API
+🌐 Simple web frontend with SDG dropdown and chat interface
+🔐 Relevance-check mechanism to reject unrelated questions
+⚡ Fast, local, private — no external API calls required!
+
+# 🛠️ Tech Stack
+
+Backend: Python, Flask
+LLM: Ollama running Phi-3 model locally
+Frontend: HTML, JavaScript, CSS
+Deployment: Run locally with Flask + Ollama setup
+
