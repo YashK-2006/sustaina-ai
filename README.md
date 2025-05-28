@@ -18,6 +18,9 @@ Sustaina AI is an intelligent, SDG-specific chatbot platform built with Flask an
 
 ⚡ Fast, local, private — no external API calls required!
 
+![WhatsApp Image 2025-05-28 at 19 37 06_82865ffb](https://github.com/user-attachments/assets/c2a3775d-dfa3-468c-81bc-e5738fc4d8c2)
+
+
 # 🛠️ Tech Stack
 
 Backend: Python, Flask
