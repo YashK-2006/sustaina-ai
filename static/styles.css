@@ -969,3 +969,6 @@ body.light-theme:not(.landing-page) .chat-privacy-note { color: #607d6b; }
  body:not(.landing-page) .assistant-status { margin: 0 14px; padding: 12px 4px; }
  body:not(.landing-page) .assistant-status small { font-size: .51rem; letter-spacing: .06em; }
 }
+
+/* Keep the ambient canvas behind content while remaining visible. */
+body { isolation: isolate; }
