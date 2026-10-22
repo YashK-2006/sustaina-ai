@@ -1,94 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sustaina AI - SDG Chatbot</title>
-    <link rel="stylesheet" href="/static/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#071b16">
+<meta name="description" content="Explore the 17 UN Sustainable Development Goals through thoughtful conversations with locally hosted AI.">
+<title>Sustaina AI — Intelligence with Purpose</title>
+<link rel="stylesheet" href="/static/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="ambient-bg"></div>
-    <nav class="main-navbar">
-        <div class="navbar-logo">Sustaina AI</div>
-        <div class="navbar-links">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="chatbot.html" class="nav-link">Chatbot</a>
-        </div>
-    </nav>
-    <div class="container">
-        <header class="main-header">
-            <div class="logo">
-                <h1>Sustaina AI</h1>
-            </div>
-            <div class="tagline">
-                <p>Empowering the SDGs with AI-powered conversations</p>
-            </div>
-        </header>
-        <div class="sdg-select-container">
-            <label for="sdg-select" class="sdg-select-label">Choose a Sustainable Development Goal:</label>
-            <select id="sdg-select" class="sdg-select">
-                <option value="" disabled selected>Select an SDG...</option>
-                <option value="1">SDG 1. No Poverty</option>
-                <option value="2">SDG 2. Zero Hunger</option>
-                <option value="3">SDG 3. Good Health and Well-being</option>
-                <option value="4">SDG 4. Quality Education</option>
-                <option value="5">SDG 5. Gender Equality</option>
-                <option value="6">SDG 6. Clean Water and Sanitation</option>
-                <option value="7">SDG 7. Affordable and Clean Energy</option>
-                <option value="8">SDG 8. Decent Work and Economic Growth</option>
-                <option value="9">SDG 9. Industry, Innovation and Infrastructure</option>
-                <option value="10">SDG 10. Reduced Inequalities</option>
-                <option value="11">SDG 11. Sustainable Cities and Communities</option>
-                <option value="12">SDG 12. Responsible Consumption and Production</option>
-                <option value="13">SDG 13. Climate Action</option>
-                <option value="14">SDG 14. Life Below Water</option>
-                <option value="15">SDG 15. Life on Land</option>
-                <option value="16">SDG 16. Peace, Justice and Strong Institutions</option>
-                <option value="17">SDG 17. Partnerships for the Goals</option>
-            </select>
-            <button class="sdg-select-btn" id="go-to-chatbot" disabled>Go to Chatbot</button>
-        </div>
-    </div>
-    <footer>
-        &copy; 2025 Sustaina AI. All rights reserved.
-    </footer>
-    <script>
-        // SDG info for storage
-        const sdgInfo = {
-            1: { title: "No Poverty", desc: "End poverty in all its forms everywhere" },
-            2: { title: "Zero Hunger", desc: "End hunger, achieve food security and improved nutrition" },
-            3: { title: "Good Health and Well-being", desc: "Ensure healthy lives and promote well-being for all" },
-            4: { title: "Quality Education", desc: "Ensure inclusive and equitable quality education" },
-            5: { title: "Gender Equality", desc: "Achieve gender equality and empower all women and girls" },
-            6: { title: "Clean Water and Sanitation", desc: "Ensure availability and sustainable management of water" },
-            7: { title: "Affordable and Clean Energy", desc: "Ensure access to affordable, reliable, sustainable energy" },
-            8: { title: "Decent Work and Economic Growth", desc: "Promote sustained, inclusive economic growth" },
-            9: { title: "Industry, Innovation and Infrastructure", desc: "Build resilient infrastructure, promote industrialization" },
-            10: { title: "Reduced Inequalities", desc: "Reduce inequality within and among countries" },
-            11: { title: "Sustainable Cities and Communities", desc: "Make cities inclusive, safe, resilient and sustainable" },
-            12: { title: "Responsible Consumption and Production", desc: "Ensure sustainable consumption and production patterns" },
-            13: { title: "Climate Action", desc: "Take urgent action to combat climate change" },
-            14: { title: "Life Below Water", desc: "Conserve and sustainably use the oceans and marine resources" },
-            15: { title: "Life on Land", desc: "Protect, restore and promote sustainable use of ecosystems" },
-            16: { title: "Peace, Justice and Strong Institutions", desc: "Promote peaceful and inclusive societies for sustainable development" },
-            17: { title: "Partnerships for the Goals", desc: "Strengthen the means of implementation and revitalize partnerships" }
-        };
-
-        const select = document.getElementById('sdg-select');
-        const btn = document.getElementById('go-to-chatbot');
-        select.addEventListener('change', function() {
-            btn.disabled = !this.value;
-        });
-        btn.addEventListener('click', function() {
-            if (select.value) {
-                const n = select.value;
-                localStorage.setItem('currentSDG', n);
-                localStorage.setItem('sdgTitle', sdgInfo[n].title);
-                localStorage.setItem('sdgDescription', sdgInfo[n].desc);
-                window.location.href = 'chatbot.html';
-            }
-        });
-    </script>
-</body>
-</html>
+<body class="landing-page">
+<div class="ambient-bg" aria-hidden="true"></div><div class="ambient-orb orb-one" aria-hidden="true"></div><div class="ambient-orb orb-two" aria-hidden="true"></div>
+<nav class="main-navbar">
+<a class="navbar-brand" href="index.html" aria-label="Sustaina AI home"><span class="brand-mark">✳</span><span class="navbar-logo">sustaina<span>ai</span></span></a>
+<div class="navbar-links"><a href="index.html" class="nav-link active">Discover</a><a href="#the-goals" class="nav-link">The 17 Goals</a><a href="chatbot.html" class="nav-link nav-link-cta">Enter the studio <span>↗</span></a></div>
+</nav>
+<main class="landing-shell">
+<section class="hero-section">
+<div class="hero-copy reveal"><div class="eyebrow"><span class="status-dot"></span> A LOCAL AI EXPERIENCE FOR A BETTER WORLD</div>
+<h1>Big questions.<br><span class="gradient-words">A more hopeful</span><br>future.</h1>
+<p class="hero-description">Meet the 17 Sustainable Development Goals through thoughtful, AI-powered conversations. One goal at a time. One better idea at a time.</p>
+<div class="hero-actions"><a class="primary-action" href="#choose-goal">Explore the goals <span>↓</span></a><a class="quiet-action" href="chatbot.html">Open AI studio <span>↗</span></a></div>
+<div class="hero-proof"><div class="proof-mark">✳</div><div><strong>17 global goals</strong><span>One shared future</span></div><div class="proof-divider"></div><div class="proof-mark proof-mark-gold">⌘</div><div><strong>Local-first AI</strong><span>Powered by Ollama</span></div></div></div>
+<div class="hero-visual reveal reveal-delay"><div class="visual-frame"><div class="visual-topline"><span>THE SUSTAINABILITY ORBIT</span><span class="live-pill"><i></i> IN MOTION</span></div>
+<img src="/static/sustaina-hero.svg" alt="Emerald planet, golden orbit lines and leaves representing a shared sustainable future">
+<div class="floating-note note-top"><span class="note-icon">✦</span><span><b>17 goals</b><small>One shared future</small></span></div><div class="floating-note note-bottom"><span class="note-icon note-icon-green">↗</span><span><b>Ideas into impact</b><small>Start with a question</small></span></div></div><div class="orbit-ring orbit-ring-one"></div><div class="orbit-ring orbit-ring-two"></div></div>
+</section>
+<section class="goal-picker-section reveal" id="choose-goal"><div class="section-kicker">YOUR JOURNEY STARTS HERE</div><div class="section-heading-row"><div><h2>Choose your cause.</h2><p>Pick an SDG to shape your conversation with Sustaina AI.</p></div><span class="section-count">01 <span>/ 17</span></span></div>
+<div class="sdg-select-container"><label for="sdg-select" class="sdg-select-label">SELECT A SUSTAINABLE DEVELOPMENT GOAL</label><div class="select-wrap"><span class="select-spark">✳</span><select id="sdg-select" class="sdg-select">
+<option value="" disabled selected>Select a goal to begin…</option>
+<option value="1">01 · No Poverty</option><option value="2">02 · Zero Hunger</option><option value="3">03 · Good Health and Well-being</option><option value="4">04 · Quality Education</option><option value="5">05 · Gender Equality</option><option value="6">06 · Clean Water and Sanitation</option><option value="7">07 · Affordable and Clean Energy</option><option value="8">08 · Decent Work and Economic Growth</option><option value="9">09 · Industry, Innovation and Infrastructure</option><option value="10">10 · Reduced Inequalities</option><option value="11">11 · Sustainable Cities and Communities</option><option value="12">12 · Responsible Consumption and Production</option><option value="13">13 · Climate Action</option><option value="14">14 · Life Below Water</option><option value="15">15 · Life on Land</option><option value="16">16 · Peace, Justice and Strong Institutions</option><option value="17">17 · Partnerships for the Goals</option>
+</select><span class="select-chevron">⌄</span></div><button class="sdg-select-btn" id="go-to-chatbot" disabled>Begin your conversation <span>↗</span></button><p class="selection-note"><span>✦</span> Your selected goal guides the AI's conversation prompt.</p></div></section>
+<section class="goals-section reveal" id="the-goals"><div class="section-kicker">A BLUEPRINT FOR TOMORROW</div><div class="section-heading-row"><div><h2>17 goals. Infinite possibility.</h2><p>Choose a card to set your focus and begin exploring.</p></div></div>
+<div class="sdg-grid">
+<button class="sdg-tile" data-sdg="1" style="--tile:#E5243B"><span>01</span><b>No Poverty</b><i>↗</i></button><button class="sdg-tile" data-sdg="2" style="--tile:#DDA63A"><span>02</span><b>Zero Hunger</b><i>↗</i></button><button class="sdg-tile" data-sdg="3" style="--tile:#4C9F38"><span>03</span><b>Good Health</b><i>↗</i></button><button class="sdg-tile" data-sdg="4" style="--tile:#C5192D"><span>04</span><b>Quality Education</b><i>↗</i></button><button class="sdg-tile" data-sdg="5" style="--tile:#FF3A21"><span>05</span><b>Gender Equality</b><i>↗</i></button><button class="sdg-tile" data-sdg="6" style="--tile:#26BDE2"><span>06</span><b>Clean Water</b><i>↗</i></button><button class="sdg-tile" data-sdg="7" style="--tile:#FCC30B"><span>07</span><b>Clean Energy</b><i>↗</i></button><button class="sdg-tile" data-sdg="8" style="--tile:#A21942"><span>08</span><b>Decent Work</b><i>↗</i></button><button class="sdg-tile" data-sdg="9" style="--tile:#FD6925"><span>09</span><b>Innovation</b><i>↗</i></button><button class="sdg-tile" data-sdg="10" style="--tile:#DD1367"><span>10</span><b>Reduced Inequalities</b><i>↗</i></button><button class="sdg-tile" data-sdg="11" style="--tile:#FD9D24"><span>11</span><b>Sustainable Cities</b><i>↗</i></button><button class="sdg-tile" data-sdg="12" style="--tile:#BF8B2E"><span>12</span><b>Responsible Consumption</b><i>↗</i></button><button class="sdg-tile" data-sdg="13" style="--tile:#3F7E44"><span>13</span><b>Climate Action</b><i>↗</i></button><button class="sdg-tile" data-sdg="14" style="--tile:#0A97D9"><span>14</span><b>Life Below Water</b><i>↗</i></button><button class="sdg-tile" data-sdg="15" style="--tile:#56C02B"><span>15</span><b>Life on Land</b><i>↗</i></button><button class="sdg-tile" data-sdg="16" style="--tile:#00689D"><span>16</span><b>Peace & Justice</b><i>↗</i></button><button class="sdg-tile" data-sdg="17" style="--tile:#19486A"><span>17</span><b>Partnerships</b><i>↗</i></button>
+</div></section>
+<section class="manifesto reveal"><div class="manifesto-symbol">✳</div><div><div class="section-kicker">A SMALL STEP TOWARD A BIGGER CHANGE</div><h2>Knowledge is a beginning.<br><span>Action is the ambition.</span></h2></div><a href="chatbot.html" class="manifesto-link">Enter the AI studio <span>↗</span></a></section>
+</main>
+<footer class="site-footer"><a class="footer-brand" href="index.html">✳ Sustaina AI</a><span>Built for a more thoughtful, sustainable future.</span><a href="https://sdgs.un.org/goals" target="_blank" rel="noopener noreferrer">Explore the UN SDGs ↗</a></footer>
+<script>
+const sdgInfo={1:{title:"No Poverty",desc:"End poverty in all its forms everywhere"},2:{title:"Zero Hunger",desc:"End hunger, achieve food security and improved nutrition"},3:{title:"Good Health and Well-being",desc:"Ensure healthy lives and promote well-being for all"},4:{title:"Quality Education",desc:"Ensure inclusive and equitable quality education"},5:{title:"Gender Equality",desc:"Achieve gender equality and empower all women and girls"},6:{title:"Clean Water and Sanitation",desc:"Ensure availability and sustainable management of water"},7:{title:"Affordable and Clean Energy",desc:"Ensure access to affordable, reliable, sustainable energy"},8:{title:"Decent Work and Economic Growth",desc:"Promote sustained, inclusive economic growth"},9:{title:"Industry, Innovation and Infrastructure",desc:"Build resilient infrastructure, promote industrialization"},10:{title:"Reduced Inequalities",desc:"Reduce inequality within and among countries"},11:{title:"Sustainable Cities and Communities",desc:"Make cities inclusive, safe, resilient and sustainable"},12:{title:"Responsible Consumption and Production",desc:"Ensure sustainable consumption and production patterns"},13:{title:"Climate Action",desc:"Take urgent action to combat climate change"},14:{title:"Life Below Water",desc:"Conserve and sustainably use the oceans and marine resources"},15:{title:"Life on Land",desc:"Protect, restore and promote sustainable use of ecosystems"},16:{title:"Peace, Justice and Strong Institutions",desc:"Promote peaceful and inclusive societies for sustainable development"},17:{title:"Partnerships for the Goals",desc:"Strengthen the means of implementation and revitalize partnerships"}};
+const select=document.getElementById('sdg-select'),btn=document.getElementById('go-to-chatbot');
+function chooseGoal(value){select.value=String(value);btn.disabled=!select.value;document.querySelectorAll('.sdg-tile').forEach(t=>t.classList.toggle('selected',t.dataset.sdg===String(value)));document.querySelector('.section-count').innerHTML=String(value).padStart(2,'0')+' <span>/ 17</span>';}
+select.addEventListener('change',()=>chooseGoal(select.value));
+document.querySelectorAll('.sdg-tile').forEach(t=>t.addEventListener('click',()=>{chooseGoal(t.dataset.sdg);document.getElementById('choose-goal').scrollIntoView({behavior:'smooth',block:'center'});}));
+btn.addEventListener('click',()=>{if(!select.value)return;const n=select.value;localStorage.setItem('currentSDG',n);localStorage.setItem('sdgTitle',sdgInfo[n].title);localStorage.setItem('sdgDescription',sdgInfo[n].desc);window.location.href='chatbot.html';});
+if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));}
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'));
+</script>
+</body></html>
