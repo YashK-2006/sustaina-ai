@@ -178,4 +178,21 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         document.head.appendChild(style);
     }
+
+    // Persist the studio's royal dark / soft-light appearance.
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        const applyTheme = theme => {
+            document.body.classList.toggle('light-theme', theme === 'light');
+            themeToggle.textContent = theme === 'light' ? '☼' : '✦';
+            themeToggle.setAttribute('aria-pressed', String(theme === 'light'));
+            themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark appearance' : 'Switch to light appearance');
+        };
+        applyTheme(localStorage.getItem('sustainaTheme') === 'light' ? 'light' : 'dark');
+        themeToggle.addEventListener('click', () => {
+            const next = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+            localStorage.setItem('sustainaTheme', next);
+            applyTheme(next);
+        });
+    }
 });
