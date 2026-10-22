@@ -922,3 +922,50 @@ body:not(.landing-page) footer { margin-top: 0; padding: 22px; }
  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
  .reveal { opacity: 1; transform: none; }
 }
+
+
+/* Conversation studio finishing details */
+.chat-studio-shell { max-width: 1040px; margin: 0 auto; padding: 36px clamp(16px,4vw,52px) 0; }
+.studio-heading { max-width: 760px; margin: 0 auto 26px; text-align: center; animation: welcomeRise .7s both; }
+.studio-heading .section-kicker { justify-content: center; }
+.studio-heading h1 { margin: 15px 0 10px; color: #f3f7ef; font: 800 clamp(2rem,4.5vw,3.4rem)/1.1 'Manrope',sans-serif; letter-spacing: -.06em; }
+.studio-heading p { margin: 0; color: #a5b8ad; line-height: 1.75; }
+body:not(.landing-page) .chatbot-container { max-width: 900px; min-height: 66vh; }
+body:not(.landing-page) .chat-title-copy { min-width: 0; }
+body:not(.landing-page) .chat-title-caption { display: block; margin-top: 5px; color: #7e9d8c; font-size: .59rem; font-weight: 800; letter-spacing: .15em; }
+body:not(.landing-page) .sdg-title-group { min-width: 0; }
+body:not(.landing-page) .assistant-status { display: flex; align-items: center; gap: 12px; margin: 0 28px; padding: 14px 16px; border-bottom: 1px solid rgba(217,184,108,.12); color: #e6f0e8; }
+.assistant-status > span:nth-child(2) { display: flex; flex-direction: column; gap: 4px; }.assistant-status b { font-size: .78rem; }.assistant-status small { color: #809d8d; font-size: .59rem; letter-spacing: .11em; }.status-spark { margin-left: auto; color: var(--royal-gold); font-size: 20px; animation: markGlow 4s ease-in-out infinite; }
+body:not(.landing-page) .welcome-message { position: relative; overflow: hidden; }.welcome-message::after { content: ""; position: absolute; top: -80%; left: -50%; width: 35%; height: 250%; background: linear-gradient(90deg,transparent,rgba(255,255,255,.045),transparent); transform: rotate(20deg); animation: welcomeShimmer 8s ease-in-out infinite; pointer-events: none; }
+@keyframes welcomeShimmer { 0%,45% { left: -55%; } 75%,100% { left: 130%; } }
+.welcome-emblem { display: grid; place-items: center; width: 42px; height: 42px; margin: 0 auto 12px; border: 1px solid rgba(217,184,108,.3); border-radius: 14px; color: var(--royal-gold-light); font-size: 23px; background: rgba(217,184,108,.08); animation: markGlow 4s ease-in-out infinite; }
+.welcome-footnote { margin-top: 15px; color: var(--royal-gold); font-size: .74rem; letter-spacing: .04em; }
+.chat-privacy-note { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 0 16px 20px; color: #6f8b7c; font-size: .68rem; text-align: center; }.chat-privacy-note span { color: var(--royal-gold); }
+body:not(.landing-page) .theme-toggle { width: 38px; height: 38px; border: 1px solid rgba(217,184,108,.25); border-radius: 12px; background: rgba(217,184,108,.08); font-size: 1rem; }
+body:not(.landing-page) .theme-toggle:hover { background: rgba(217,184,108,.17); transform: rotate(-8deg); }
+body:not(.landing-page) .typing-indicator .bubble { min-width: 58px; min-height: 34px; display: flex; align-items: center; gap: 5px; }
+body:not(.landing-page) .dot-flashing { width: 6px; height: 6px; margin: 0 8px; box-shadow: 9px 0 0 currentColor, 18px 0 0 currentColor; animation: typingDots .8s ease-in-out infinite alternate; }
+@keyframes typingDots { from { opacity: .35; transform: translateY(2px); } to { opacity: 1; transform: translateY(-2px); } }
+body.light-theme { --royal-text: #17352a; --royal-muted: #587367; color: #17352a; background: #edf4ec; }
+body.light-theme .ambient-bg { background: radial-gradient(ellipse at 18% 8%, #d7f2df, transparent 35%), radial-gradient(ellipse at 83% 30%, #f5e8c8, transparent 32%), linear-gradient(135deg,#f1f7ee,#e1efe4); }
+body.light-theme .main-navbar, body.light-theme .site-footer { background: rgba(241,248,240,.88); border-color: rgba(44,98,67,.16); }
+body.light-theme .navbar-logo, body.light-theme .hero-copy h1, body.light-theme .section-heading-row h2, body.light-theme .manifesto h2, body.light-theme .studio-heading h1 { color: #14372a; }
+body.light-theme .nav-link { color: #426755; } body.light-theme .nav-link.active, body.light-theme .nav-link:hover { color: #163e2d; }
+body.light-theme .hero-description, body.light-theme .section-heading-row p, body.light-theme .studio-heading p { color: #567564; }
+body.light-theme .visual-frame, body.light-theme .sdg-select-container, body.light-theme .manifesto { box-shadow: 0 20px 65px rgba(22,65,42,.12); }
+body.light-theme .sdg-tile { background: linear-gradient(145deg,rgba(255,255,255,.95),rgba(235,246,236,.96)); color: #183a2b; border-color: rgba(30,82,51,.13); }
+body.light-theme .site-footer, body.light-theme .site-footer a { color: #496b57; }
+body.light-theme:not(.landing-page) .chatbot-container { background: rgba(248,252,247,.96); border-color: rgba(40,100,64,.2); }
+body.light-theme:not(.landing-page) .chatbot-header, body.light-theme:not(.landing-page) .assistant-status, body.light-theme:not(.landing-page) .chat-input-container { border-color: rgba(40,100,64,.13); }
+body.light-theme:not(.landing-page) #sdg-title { color: #183b2a; }
+body.light-theme:not(.landing-page) .assistant-status b { color: #234a35; } body.light-theme:not(.landing-page) .assistant-status small { color: #668572; }
+body.light-theme:not(.landing-page) .welcome-message { background: linear-gradient(135deg,#f4fbf2,#e8f5e8); border-color: rgba(40,100,64,.15); }
+body.light-theme:not(.landing-page) .welcome-message h2 { color: #1b4a31; } body.light-theme:not(.landing-page) .welcome-message p { color: #547363; }
+body.light-theme:not(.landing-page) .bubble.bot { background: #e9f4e9; color: #1c392a; } body.light-theme:not(.landing-page) #user-input { background: #f7fbf5; color: #183b2a; border-color: rgba(40,100,64,.2); }
+body.light-theme:not(.landing-page) .chat-input-container { background: rgba(235,246,234,.9); }
+body.light-theme:not(.landing-page) .chat-privacy-note { color: #607d6b; }
+@media (max-width: 620px) {
+ .chat-studio-shell { padding: 28px 10px 0; }.studio-heading { padding: 0 12px; margin-bottom: 20px; }
+ body:not(.landing-page) .assistant-status { margin: 0 14px; padding: 12px 4px; }
+ body:not(.landing-page) .assistant-status small { font-size: .51rem; letter-spacing: .06em; }
+}
