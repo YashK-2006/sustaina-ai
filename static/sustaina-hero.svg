@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="680" viewBox="0 0 1400 680" role="img" aria-labelledby="title desc">
+<title id="title">Sustaina AI — The future, thoughtfully grown</title>
+<desc id="desc">A luminous emerald planet with golden orbit paths, leaves, and constellation-like Sustainable Development Goal nodes on a midnight-green field.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#061713"/><stop offset=".52" stop-color="#0B2D25"/><stop offset="1" stop-color="#071A17"/></linearGradient>
+ <radialGradient id="planet"><stop stop-color="#B8F2C6"/><stop offset=".45" stop-color="#3CCB8B"/><stop offset="1" stop-color="#08654B"/></radialGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF1B8"/><stop offset=".5" stop-color="#D8B45A"/><stop offset="1" stop-color="#96702D"/></linearGradient>
+ <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#C5F7C9"/><stop offset="1" stop-color="#28A66A"/></linearGradient>
+ <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <radialGradient id="halo"><stop stop-color="#32D583" stop-opacity=".24"/><stop offset="1" stop-color="#32D583" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#B8F2C6" stroke-opacity=".06"/></pattern>
+</defs>
+<rect width="1400" height="680" rx="32" fill="url(#bg)"/><rect width="1400" height="680" rx="32" fill="url(#grid)"/>
+<ellipse cx="700" cy="325" rx="470" ry="340" fill="url(#halo)"/>
+<g fill="none" stroke-linecap="round">
+ <ellipse cx="700" cy="330" rx="420" ry="155" transform="rotate(-19 700 330)" stroke="url(#gold)" stroke-opacity=".8" stroke-width="2"/>
+ <ellipse cx="700" cy="330" rx="475" ry="205" transform="rotate(23 700 330)" stroke="#71E4A3" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="5 14"/>
+ <ellipse cx="700" cy="330" rx="330" ry="245" transform="rotate(-42 700 330)" stroke="#B8F2C6" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="3 12"/>
+ <path d="M205 180Q440 80 575 190T900 220T1200 155" stroke="#D8B45A" stroke-opacity=".4" stroke-width="2" stroke-dasharray="7 15"><animate attributeName="stroke-dashoffset" values="0;-132" dur="9s" repeatCount="indefinite"/></path>
+ <path d="M180 490Q430 600 610 460T950 445T1220 525" stroke="#43D99B" stroke-opacity=".55" stroke-width="2" stroke-dasharray="6 18"><animate attributeName="stroke-dashoffset" values="0;144" dur="8s" repeatCount="indefinite"/></path>
+</g>
+<g fill="#E8D18B" filter="url(#glow)">
+ <circle cx="267" cy="194" r="5"><animate attributeName="r" values="3;7;3" dur="3s" repeatCount="indefinite"/></circle>
+ <circle cx="1100" cy="195" r="5"><animate attributeName="r" values="3;7;3" dur="2.5s" repeatCount="indefinite"/></circle>
+ <circle cx="290" cy="492" r="5"><animate attributeName="r" values="3;7;3" dur="2.8s" repeatCount="indefinite"/></circle>
+ <circle cx="1085" cy="485" r="5"><animate attributeName="r" values="3;7;3" dur="3.3s" repeatCount="indefinite"/></circle>
+</g>
+<g transform="translate(700 325)">
+ <circle r="168" fill="#06271E" stroke="#D8B45A" stroke-opacity=".6" stroke-width="2"/>
+ <circle r="150" fill="none" stroke="#80E6A5" stroke-opacity=".65" stroke-width="1.5" stroke-dasharray="3 12"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="42s" repeatCount="indefinite"/></circle>
+ <circle r="128" fill="url(#planet)" opacity=".94" filter="url(#glow)"/>
+ <path d="M-113 -24Q-72 -85 -20 -70T62 -98Q104 -75 102 -25Q61 -4 35 31T-34 78Q-79 58 -95 20Z" fill="#0A7C56" opacity=".8"/>
+ <path d="M-12 94Q-42 37 -6 -10Q16 -40 48 -56Q37 -5 12 17Q-7 43 -12 94Z" fill="url(#leaf)" stroke="#D1F7D7" stroke-opacity=".8" stroke-width="2"/>
+ <path d="M-10 94Q-18 35 48 -56" fill="none" stroke="#E6FBE8" stroke-opacity=".85" stroke-width="2"/>
+ <path d="M-30 12Q-83 -6 -87 -54Q-35 -52 -13 -12Q-6 3 -10 21Z" fill="url(#leaf)" stroke="#D1F7D7" stroke-opacity=".8" stroke-width="2"/>
+ <path d="M-10 22L-87 -54" fill="none" stroke="#E6FBE8" stroke-opacity=".75" stroke-width="2"/>
+ <circle r="187" fill="none" stroke="#D8B45A" stroke-opacity=".45" stroke-width="1"><animate attributeName="r" values="174;202;174" dur="5s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".45;0;.45" dur="5s" repeatCount="indefinite"/></circle>
+</g>
+<g font-family="Montserrat,Segoe UI,Arial,sans-serif" text-anchor="middle">
+ <text x="700" y="74" font-size="14" letter-spacing="6" fill="#B7EBC9">17 GOALS · ONE SHARED FUTURE</text>
+ <text x="700" y="570" font-size="46" font-weight="800" letter-spacing="7" fill="#F4F8F0">SUSTAINA AI</text>
+ <text x="700" y="610" font-size="16" letter-spacing="3" fill="url(#gold)">INTELLIGENCE WITH PURPOSE</text>
+ <text x="700" y="642" font-size="12" letter-spacing="2" fill="#A9C8B7">LOCAL AI · GLOBAL GOALS · HUMAN-CENTRED IMPACT</text>
+</g>
+</svg>
