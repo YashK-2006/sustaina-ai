@@ -1,49 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sustaina AI Chatbot</title>
-    <link rel="stylesheet" href="/static/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#071b16">
+<meta name="description" content="Explore a Sustainable Development Goal through a focused conversation with Sustaina AI.">
+<title>Sustaina AI — AI Conversation Studio</title>
+<link rel="stylesheet" href="/static/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="ambient-bg"></div>
-    <nav class="main-navbar">
-        <div class="navbar-logo">Sustaina AI</div>
-        <div class="navbar-links">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="chatbot.html" class="nav-link active">Chatbot</a>
-        </div>
-        <button id="theme-toggle" class="theme-toggle" title="Toggle theme">🌙</button>
-    </nav>
-    <main>
-        <div class="chatbot-container">
-            <div class="chatbot-header">
-                <button class="back-btn" onclick="window.location.href='index.html'" title="Back">&#8592;</button>
-                <div class="sdg-icon-large" id="sdg-icon"><span id="sdg-number"></span></div>
-                <div class="sdg-title-group">
-                    <h1 id="sdg-title"></h1>
-                    <button id="clear-chat" class="clear-btn" title="Clear chat">&#128465;</button>
-                </div>
-            </div>
-            <div id="chat-messages" class="chat-messages">
-                <div class="welcome-message" id="welcome-message">
-                    <h2 id="welcome-title"></h2>
-                    <p id="welcome-description"></p>
-                </div>
-                <!-- Messages will be added here dynamically -->
-            </div>
-            <form id="chat-form" class="chat-input-container" autocomplete="off">
-                <button id="voice-btn" class="voice-btn" title="Voice input">🎤</button>
-                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" />
-                <button type="submit" id="send-button" title="Send">&#9658;</button>
-            </form>
-        </div>
-    </main>
-    <footer>
-        &copy; 2025 Sustaina AI. All rights reserved.
-    </footer>
-    <script src="/static/chatbot.js"></script>
-</body>
-</html>
+<body class="chatbot-page">
+<div class="ambient-bg" aria-hidden="true"></div><div class="ambient-orb orb-one" aria-hidden="true"></div><div class="ambient-orb orb-two" aria-hidden="true"></div>
+<nav class="main-navbar">
+<a class="navbar-brand" href="index.html" aria-label="Sustaina AI home"><span class="brand-mark">✳</span><span class="navbar-logo">sustaina<span>ai</span></span></a>
+<div class="navbar-links"><a href="index.html" class="nav-link">Discover</a><a href="index.html#the-goals" class="nav-link">The 17 Goals</a><a href="chatbot.html" class="nav-link active">AI Studio</a></div>
+<button id="theme-toggle" class="theme-toggle" title="Toggle theme" aria-label="Toggle appearance">✦</button>
+</nav>
+<main class="chat-studio-shell">
+<div class="studio-heading"><div class="section-kicker">YOUR PERSONAL SDG EXPLORATION</div><h1>Ideas begin with <span class="gradient-words">a question.</span></h1><p>A focused conversation, guided by the Sustainable Development Goal you chose.</p></div>
+<div class="chatbot-container">
+<div class="chatbot-header">
+<button class="back-btn" onclick="window.location.href='index.html#choose-goal'" title="Back to goals" aria-label="Back to goals">←</button>
+<div class="sdg-icon-large" id="sdg-icon"><span id="sdg-number"></span></div>
+<div class="sdg-title-group"><div class="chat-title-copy"><h1 id="sdg-title"></h1><span class="chat-title-caption">SUSTAINABLE DEVELOPMENT GOAL</span></div><button id="clear-chat" class="clear-btn" title="Clear chat" aria-label="Clear chat history">⌫</button></div>
+</div>
+<div class="assistant-status"><span class="status-dot"></span><span><b>Sustaina AI</b><small>LOCAL MODEL INTERFACE · GOAL-FOCUSED CONVERSATION</small></span><span class="status-spark">✳</span></div>
+<div id="chat-messages" class="chat-messages" aria-live="polite" aria-relevant="additions text">
+<div class="welcome-message" id="welcome-message"><div class="welcome-emblem">✳</div><h2 id="welcome-title"></h2><p id="welcome-description"></p><div class="welcome-footnote">Curiosity is a powerful first step.</div></div>
+</div>
+<form id="chat-form" class="chat-input-container" autocomplete="off">
+<button type="button" id="voice-btn" class="voice-btn" title="Voice input" aria-label="Voice input">🎙</button>
+<input type="text" id="user-input" placeholder="Ask a question about your chosen goal…" autocomplete="off" aria-label="Your question">
+<button type="submit" id="send-button" title="Send message" aria-label="Send message">↗</button>
+</form>
+<div class="chat-privacy-note"><span>✦</span> Model responses may be imperfect. Verify important information with reliable sources.</div>
+</div>
+</main>
+<footer class="site-footer"><a class="footer-brand" href="index.html">✳ Sustaina AI</a><span>Built for a more thoughtful, sustainable future.</span><a href="https://sdgs.un.org/goals" target="_blank" rel="noopener noreferrer">Explore the UN SDGs ↗</a></footer>
+<script src="/static/chatbot.js"></script>
+</body></html>
